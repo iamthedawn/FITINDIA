@@ -1,21 +1,17 @@
 <?php
-if(isset($_POST['submit']))
-{
-    $name = $_POST['name'];
-    $mailFrom; = $_POST['email'];
-    $message = $_POST['message'];
-    
-    $mailTo = "imthedawn@yahoo.com";
-    $subject = "Mail From FIC Website";
-    $msg = "Name: ".$name."\n"."Wrote to you :"."\n\n".$message;
+//get data from form   
+$name = $_POST['name'];
+$email= $_POST['email'];
+$message= $_POST['message'];
 
-    $headers = "From: ".$mailFrom;
-    if(mail($mailTo,$subject,$msg,$headers)){
-        echo "<h1>Mail Sent Successfully! Thank You"." ".$name.",We will contact you shortly</h1>";
-    }
-    else{
-        echo "Something Went wrong!";
-    }
-
+$to = "nmishika567@gmail.com";
+$subject = "Mail From website";
+$txt ="Name = ". $name . "\r\n  Email = " . $email . "\r\n Message =" . $message;
+$headers = "From: noreply@fitindiaiiitkota.com" . "\r\n" .
+"CC: somebodyelse@example.com";
+if($email!=NULL){
+    mail($to,$subject,$txt,$headers);
 }
+//redirect
+header("Location:index.html");
 ?>
