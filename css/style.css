@@ -571,7 +571,28 @@ footer {
   color: #FF9933;
 }
 
+/*------------------------------------
+      Heart Animation
+*/
+.fa-heart {
+  color: red;
+  animation: pulse 1s linear infinite;
+}
 
+@keyframes pulse {
+  0%{
+    transform: scale(1);
+    opacity: 0;
+  }
+  50%{
+    transform: scale(1.3);
+    opacity:1;
+  }
+  100%{
+    transform: scale(1);
+    opacity:0;
+  }
+}
 
 /*---------------------------------------
    Back top         
@@ -663,6 +684,7 @@ footer {
   }
 
 }
+
 
 
 
