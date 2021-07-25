@@ -362,6 +362,11 @@ a:hover, a:active, a:focus {
 /*---------------------------------------
     About Section              
 -----------------------------------------*/
+@media
+.team{
+
+}
+
 
 #about {
   background: #f0f0f0;
@@ -626,13 +631,29 @@ footer {
 /*---------------------------------------
    Responsive Mobile         
 -----------------------------------------*/
+@media (max-width: 998px) {
 
-@media (max-width: 980px) {
-/* 
-  #home, .overlay {
-    height: 50vh;
+    .teaam{
+      display:none;
+    }
+    .teaam-1{
+      display:block;
+    }
+  
   }
-*/
+
+  @media (min-width: 998px) {
+
+    .teaam-1{
+      display:none;
+    }
+    .teaam{
+      display:block;
+    }
+  
+  }
+@media (max-width: 980px) {
+
   #about .team-thumb {
     margin-top: 32px;
   }
